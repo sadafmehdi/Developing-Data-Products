@@ -1,0 +1,30 @@
+---
+title: "Developing Data Products Assignment 1"
+author: "Sadaf Mehdi"
+date: "16 November 2018"
+output: html_document
+---
+
+## Introduction
+The goal of this assignment is to create a web page using R Markdown that features a map created with Leaflet.
+I have pinned a few palaces to visit in india.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+```{r Leaflet }
+library(leaflet)
+my_map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lng= 78.042068,lat=27.173891, popup = "Taj Mahal, Agra") %>%
+  addMarkers(lng=78.4662 ,lat=17.3313,popup = "Falaknuma Palace, Hyderabad")%>%
+  addMarkers(lng= 73.6835,lat=24.5764,popup = "City Palace, Udaipur")
+
+my_map
+```
+
+
